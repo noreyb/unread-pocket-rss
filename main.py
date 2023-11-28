@@ -14,7 +14,7 @@ def main():
     )
 
     # pickup 15 items randomly
-    items = pocket.fetch_items_randomly(state="unread", tag=None, count=15)
+    items = pocket.fetch_items_randomly(state="unread", tag="_untagged_", count=15)
 
     # rss
     feed = Rss201rev2Feed(
