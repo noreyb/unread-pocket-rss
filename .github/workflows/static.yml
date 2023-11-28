@@ -33,7 +33,7 @@ jobs:
         with:
           python-version: "3.11"
       - uses: Gr1N/setup-poetry@v8
-      - uses: poetry install --no-root
+      - run: poetry install --no-root
       - run: POCKET_ACCESS_TOKEN=${{secrets.POCKET_ACCESS_TOKEN}} POCKET_CONSUMER_KEY=${{secrets.POCKET_CONSUMER_KEY}} poetry run python main.py
       - name: Update feed
         continue-on-error: True
