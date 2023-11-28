@@ -12,8 +12,6 @@ def main():
         consumer_key=os.environ.get("POCKET_CONSUMER_KEY"),
         access_token=os.environ.get("POCKET_ACCESS_TOKEN"),
     )
-    print(os.environ.get("POCKET_CONSUMER_KEY"))
-    print(os.environ.get("POCKET_ACCESS_TOKEN"))
 
     # pickup 15 items randomly
     items = pocket.fetch_items_randomly(state="unread", tag=None, count=15)
@@ -33,7 +31,7 @@ def main():
             description=item["excerpt"],
         )
 
-    output_path = "rss.xml"
+    output_path = "./output/rss.xml"
     with open(output_path, "w") as f:
         f.write(feed.writeString("utf-8"))
     tree = ET.parse(output_path)
