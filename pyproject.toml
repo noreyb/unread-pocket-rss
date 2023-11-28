@@ -8,6 +8,9 @@ packages = [{include = "unread_pocket_rss"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+requests = "^2.31.0"
+python-dotenv = "^1.0.0"
+feedgenerator = "^2.1.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.11.0"
